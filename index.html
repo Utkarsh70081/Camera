@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="bground">
+        <div class="outer_circle">
+          <div class="inner_circle">
+            <div class="backgroun_cam">
+              <div class="upper_semi_ckl" id="ScreenBlur">
+                <div class="image-set" id="imageSet1">
+                  <div class="insideImg" id="I1">
+                    <img src="images/bg.jpg" id="bg" class="parallax" />
+                  <div class="reverse">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                    <img src="images/moon.png" id="moon" class="parallax" />
+                    <img
+                      src="images/mountain.png"
+                      id="mountain"
+                      class="parallax"
+                    />
+                    <img src="images/road.png" id="road" class="parallax" />
+                  </div>
+                </div>
+                <div class="image-set" id="imageSet2">
+                  <div class="second_image" id="I2">
+                    <img src="/images/bg2.jpg" id="bg2" alt="bg" />
+                    <div class="snow"></div>
+                    <img src="/images/man.png" id="man" alt="man" />
+                    <img
+                      src="/images/clouds_1.png"
+                      id="clouds_1"
+                      alt="clouds_1"
+                    />
+                    <img
+                      src="/images/clouds_2.png"
+                      id="clouds_2"
+                      alt="clouds_2"
+                    />
+                    <img
+                      src="/images/mountain_left.png"
+                      id="mountain_left"
+                      alt="mountain_left"
+                    />
+                    <img
+                      src="/images/mountain_right.png"
+                      id="mountain_right"
+                      alt="mountain_right"
+                    />
+                  </div>
+                </div>
+                <div class="image-set" id="imageSet3">
+                  <div class="scenary" id="I3">
+                    <img src="/images/bg.jpg" id="bgImg3" alt="" />
+                    <div class="reverse">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <img
+                      src="/images/Mountain (1).png"
+                      id="MountainImg3"
+                      alt=""
+                    />
+                    <img src="/images/moon.png" id="moon3" alt="" />
+                    <img src="/images/clouds_1.png" id="cloud-1-3" alt="" />
+                    <img src="/images/clouds_2.png" id="cloud-2-3" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="lower_semi_ckl">
+                <div class="rectangle">
+                  <div class="rec_button">
+                    <input type="checkbox" id="blurButton" class="blurButton"/>
+                  </div>
+                </div>
+                <div class="three_box">
+                  <div class="nightOut">
+                    <input
+                      type="radio"
+                      name="image"
+                      id="nightOutButton"
+                      checked
+                    />
+                  </div>
+                  <div class="planet">
+                    <input type="radio" name="image" id="planetButton" />
+                  </div>
+                  <div class="image3">
+                    <input type="radio" name="image" id="scenary3" />
+                  </div>
+                </div>
+                <div class="rgbLine">
+                  <div class="box">
+                    <div class="line" id="line1">.</div>
+                    <div class="line" id="line2">.</div>
+                    <div class="line" id="line3">.</div>
+                  </div>
+                </div>
+                <div class="roterBox">
+                  <div class="roterArea">
+                    <ul class="roterMenu">
+                      <div class="roterToggle">
+                        <ion-icon name="add-outline"></ion-icon>
+                      </div>
+                      <li id="back"  style="--i:1;"><a href="#"><ion-icon name="caret-back-outline"></ion-icon></a></li>
+                      <li id="slow" style="--i:0;"><a href="#"><ion-icon name="caret-forward-outline"></ion-icon></a></li>
+                      <li id="fast" style="--i:2;"><a href="#"><ion-icon name="play-forward"></ion-icon></a></li>
+                      <div class="roterIndicator"></div>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="endbox">
+                  <div class="brightnessContainer"></div>
+                    <div class="brightness-box"></div>
+                      <i class="far fa-sun"></i>
+                      <input type="range" id="range" min="10" max="100" value="100" name="">
+                      <div class="slider-thumb">
+                        <div class="tooltip"></div>
+                      </div>
+                      <div class="processor"></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+
+      // const ScreenBlur=document.getElementById("ScreenBlur");
+      // const blur = document.getElementById("blurButton");
+      // document
+      //         .getElementById("blurButton")
+      //         .addEventListener("click",function (){
+      //           ScreenBlur.classList.toggle("blur");
+      //         })
+
+
+
+      const ScreenBlur = document.getElementById("ScreenBlur");
+const blurButton = document.getElementById("blurButton");
+const rangeInput = document.getElementById("range");
+const imageSets = document.querySelectorAll(".image-set"); // Select all elements with the "image-set" class
+
+blurButton.addEventListener("click", function () {
+  ScreenBlur.classList.toggle("blur");
+
+  if (!ScreenBlur.classList.contains("blur")) {
+    // If power button is off, reset range value and disable range input
+    rangeInput.value = 100;
+    rangeInput.disabled = true;
+
+    // Apply blur effect to each image set
+    imageSets.forEach(imageSet => {
+      imageSet.style.filter = "blur(10px)";
+    });
+  } else {
+    // If power button is on, enable range input and remove blur effect from each image set
+    rangeInput.disabled = false;
+
+    // Remove blur effect from each image set
+    imageSets.forEach(imageSet => {
+      imageSet.style.filter = "none";
+    });
+  }
+});
+
+rangeInput.addEventListener("input", function () {
+  if (ScreenBlur.classList.contains("blur")) {
+    // Apply brightness effect to each image set when power button is on
+    imageSets.forEach(imageSet => {
+      imageSet.style.filter = "brightness(" + rangeInput.value + "%)";
+    });
+  }
+});
+
+// Add an event listener to reset the blur effect when the power button is turned off without changing the range
+blurButton.addEventListener("change", function () {
+  if (!ScreenBlur.classList.contains("blur")) {
+    // Apply blur effect to each image set when power button is off
+    imageSets.forEach(imageSet => {
+      imageSet.style.filter = "blur(10px)";
+    });
+  }
+});
+
+
+
+//       const ScreenBlur = document.getElementById("ScreenBlur");
+// const blurButton = document.getElementById("blurButton");
+// const rangeInput = document.getElementById("range");
+// const imageSets = document.querySelectorAll(".image-set .parallax"); // Select all images inside elements with the "image-set" class
+// const upperSemiCircle = document.querySelector(".upper_semi_ckl");
+
+// blurButton.addEventListener("click", function () {
+//   ScreenBlur.classList.toggle("blur");
+
+//   if (!ScreenBlur.classList.contains("blur")) {
+//     // If power button is off, reset range value and disable range input
+//     rangeInput.value = 100;
+//     rangeInput.disabled = true;
+
+//     // Apply blur effect to the upper semi circle
+//     upperSemiCircle.style.filter = "blur(10px)";
+
+//     // Remove blur effect from all images inside elements with the "image-set" class
+//     imageSets.forEach(image => {
+//       image.style.filter = "none";
+//     });
+//   } else {
+//     // If power button is on, enable range input and remove blur effect from the upper semi circle
+//     rangeInput.disabled = false;
+//     upperSemiCircle.style.filter = "none";
+
+//     // Remove blur effect from all images inside elements with the "image-set" class
+//     imageSets.forEach(image => {
+//       image.style.filter = "none";
+//     });
+//   }
+// });
+
+// rangeInput.addEventListener("input", function () {
+//   if (ScreenBlur.classList.contains("blur")) {
+//     // Apply brightness effect to all images inside elements with the "image-set" class when power button is on
+//     imageSets.forEach(image => {
+//       image.style.filter = "brightness(" + rangeInput.value + "%)";
+//     });
+//   }
+// });
+
+// // Add an event listener to reset the blur effect when the power button is turned off without changing the range
+// blurButton.addEventListener("change", function () {
+//   if (!ScreenBlur.classList.contains("blur")) {
+//     // Apply blur effect to the upper semi circle when power button is off
+//     upperSemiCircle.style.filter = "blur(10px)";
+
+//     // Remove blur effect from all images inside elements with the "image-set" class
+//     imageSets.forEach(image => {
+//       image.style.filter = "none";
+//     });
+//   }
+// });
+
+
+
+
+      const scenary3 = document.getElementById("scenary3");
+      const moon = document.querySelector("#moon");
+      const mountain = document.querySelector("#mountain");
+      const bg = document.querySelector("#bg");
+      const lowersemi = document.querySelector(".lower_semi_ckl");
+
+      const nightOutButton = document.getElementById("nightOutButton");
+      const bg2 = document.querySelector("#bg2");
+      const man = document.querySelector("#man");
+      const clouds_1 = document.querySelector("#clouds_1");
+      const clouds_2 = document.querySelector("#clouds_2");
+      const mountain_left = document.querySelector("#mountain_left");
+      const mountain_right = document.querySelector("#mountain_right");
+
+      const toggle = document.getElementById("planetButton");
+      const bgImg3 = document.querySelector("#bgImg3");
+      const MountainImg3 = document.querySelector("#MountainImg3");
+      const tree3 = document.querySelector("#moon3");
+      const cloud13 = document.querySelector("#cloud-1-3");
+      const cloud23 = document.querySelector("#cloud-2-3");
+
+      
+
+      const one = document.getElementById("I1");
+      const two = document.getElementById("I2");
+      const three = document.getElementById("I3");
+
+      document
+        .getElementById("scenary3")
+        .addEventListener("click", function () {
+          one.style.display = "none";
+          two.style.display = "none";
+          three.style.display = "block";
+
+          scenary3.classList.toggle("active");
+          MountainImg3.classList.toggle("active");
+          moon3.classList.toggle("active");
+          cloud13.classList.toggle("active");
+          cloud23.classList.toggle("active");
+        });
+
+      document
+        .getElementById("nightOutButton")
+        .addEventListener("click", function () {
+          one.style.display = "block";
+          two.style.display = "none";
+          three.style.display = "none";
+
+          nightOutButton.classList.toggle("active");
+          moon.classList.toggle("active");
+          mountain.classList.toggle("active");
+          bg.classList.toggle("active");
+          lowersemi.classList.toggle("active");
+        });
+
+      document
+        .getElementById("planetButton")
+        .addEventListener("click", function () {
+          one.style.display = "none";
+          two.style.display = "block";
+          three.style.display = "none";
+
+          toggle.classList.toggle("active");
+          man.classList.toggle("active");
+          clouds_1.classList.toggle("active");
+          clouds_2.classList.toggle("active");
+          mountain_left.classList.toggle("active");
+          mountain_right.classList.toggle("active");
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+  let back = document.getElementById('back');
+  let slow = document.getElementById('slow');
+  let fast = document.getElementById('fast');
+  let roterIndicator = document.querySelector('.roterIndicator');
+  let snow=document.querySelector('.snow');
+
+
+var spans = document.querySelectorAll('.reverse span');
+
+back.onclick = function () {
+    roterIndicator.classList.toggle('backMove');
+    roterIndicator.classList.remove('slowMove');
+    roterIndicator.classList.remove('fastMove');
+    snow.classList.remove('fastSnow');
+    snow.classList.toggle('backSnow');
+
+    for (var i = 0; i < spans.length; i++) {
+        spans[i].classList.toggle('reverseFlow');
+    }
+
+    for (var i = 0; i < spans.length; i++) {
+        spans[i].classList.remove('fastFlow');
+    }
+};
+
+slow.onclick = function () {
+    roterIndicator.classList.toggle('slowMove');
+    roterIndicator.classList.remove('fastMove');
+    roterIndicator.classList.remove('backMove');
+    snow.classList.remove('backSnow');
+    snow.classList.remove('fastSnow');
+
+    for (var i = 0; i < spans.length; i++) {
+        spans[i].classList.remove('reverseFlow');
+    }
+    for (var i = 0; i < spans.length; i++) {
+        spans[i].classList.remove('fastFlow');
+    }
+}
+
+
+  fast.onclick = function () {
+    roterIndicator.classList.toggle('fastMove');
+    roterIndicator.classList.remove('slowMove');
+    roterIndicator.classList.remove('backMove');
+    snow.classList.toggle('fastSnow');
+    snow.classList.remove('backSnow');
+
+    for (var i = 0; i < spans.length; i++) {
+        spans[i].classList.remove('reverseFlow');
+    }
+
+    for (var i = 0; i < spans.length; i++) {
+        spans[i].classList.toggle('fastFlow');
+    }
+  }
+});
+
+    </script>
+
+<script type="text/javascript">
+  rangeInput=document.getElementById('range');
+  brightnessContainer=document.getElementsByClassName('upper_semi_ckl')[0];
+
+  rangeInput.addEventListener("change",function(){
+    brightnessContainer.style.filter="brightness(" + rangeInput.value + "%)"
+  })
+
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
