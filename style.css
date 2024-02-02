@@ -941,6 +941,7 @@ transform: rotate(220deg);
   section{
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
   }
   .upper_semi_ckl{
     margin-top: -136px;
