@@ -41,26 +41,26 @@
                 </div>
                 <div class="image-set" id="imageSet2">
                   <div class="second_image" id="I2">
-                    <img src="/images/bg2.jpg" id="bg2" alt="bg" />
+                    <img src="images/bg2.jpg" id="bg2" alt="bg" />
                     <div class="snow"></div>
-                    <img src="/images/man.png" id="man" alt="man" />
+                    <img src="images/man.png" id="man" alt="man" />
                     <img
-                      src="/images/clouds_1.png"
+                      src="images/clouds_1.png"
                       id="clouds_1"
                       alt="clouds_1"
                     />
                     <img
-                      src="/images/clouds_2.png"
+                      src="images/clouds_2.png"
                       id="clouds_2"
                       alt="clouds_2"
                     />
                     <img
-                      src="/images/mountain_left.png"
+                      src="images/mountain_left.png"
                       id="mountain_left"
                       alt="mountain_left"
                     />
                     <img
-                      src="/images/mountain_right.png"
+                      src="images/mountain_right.png"
                       id="mountain_right"
                       alt="mountain_right"
                     />
@@ -68,7 +68,7 @@
                 </div>
                 <div class="image-set" id="imageSet3">
                   <div class="scenary" id="I3">
-                    <img src="/images/bg.jpg" id="bgImg3" alt="" />
+                    <img src="images/bg.jpg" id="bgImg3" alt="" />
                     <div class="reverse">
                       <span></span>
                       <span></span>
@@ -79,13 +79,13 @@
                       <span></span>
                     </div>
                     <img
-                      src="/images/Mountain (1).png"
+                      src="images/Mountain (1).png"
                       id="MountainImg3"
                       alt=""
                     />
-                    <img src="/images/moon.png" id="moon3" alt="" />
-                    <img src="/images/clouds_1.png" id="cloud-1-3" alt="" />
-                    <img src="/images/clouds_2.png" id="cloud-2-3" alt="" />
+                    <img src="images/moon.png" id="moon3" alt="" />
+                    <img src="images/clouds_1.png" id="cloud-1-3" alt="" />
+                    <img src="images/clouds_2.png" id="cloud-2-3" alt="" />
                   </div>
                 </div>
               </div>
@@ -151,16 +151,6 @@
     </section>
     <script>
 
-      // const ScreenBlur=document.getElementById("ScreenBlur");
-      // const blur = document.getElementById("blurButton");
-      // document
-      //         .getElementById("blurButton")
-      //         .addEventListener("click",function (){
-      //           ScreenBlur.classList.toggle("blur");
-      //         })
-
-
-
       const ScreenBlur = document.getElementById("ScreenBlur");
 const blurButton = document.getElementById("blurButton");
 const rangeInput = document.getElementById("range");
@@ -207,65 +197,6 @@ blurButton.addEventListener("change", function () {
     });
   }
 });
-
-
-
-//       const ScreenBlur = document.getElementById("ScreenBlur");
-// const blurButton = document.getElementById("blurButton");
-// const rangeInput = document.getElementById("range");
-// const imageSets = document.querySelectorAll(".image-set .parallax"); // Select all images inside elements with the "image-set" class
-// const upperSemiCircle = document.querySelector(".upper_semi_ckl");
-
-// blurButton.addEventListener("click", function () {
-//   ScreenBlur.classList.toggle("blur");
-
-//   if (!ScreenBlur.classList.contains("blur")) {
-//     // If power button is off, reset range value and disable range input
-//     rangeInput.value = 100;
-//     rangeInput.disabled = true;
-
-//     // Apply blur effect to the upper semi circle
-//     upperSemiCircle.style.filter = "blur(10px)";
-
-//     // Remove blur effect from all images inside elements with the "image-set" class
-//     imageSets.forEach(image => {
-//       image.style.filter = "none";
-//     });
-//   } else {
-//     // If power button is on, enable range input and remove blur effect from the upper semi circle
-//     rangeInput.disabled = false;
-//     upperSemiCircle.style.filter = "none";
-
-//     // Remove blur effect from all images inside elements with the "image-set" class
-//     imageSets.forEach(image => {
-//       image.style.filter = "none";
-//     });
-//   }
-// });
-
-// rangeInput.addEventListener("input", function () {
-//   if (ScreenBlur.classList.contains("blur")) {
-//     // Apply brightness effect to all images inside elements with the "image-set" class when power button is on
-//     imageSets.forEach(image => {
-//       image.style.filter = "brightness(" + rangeInput.value + "%)";
-//     });
-//   }
-// });
-
-// // Add an event listener to reset the blur effect when the power button is turned off without changing the range
-// blurButton.addEventListener("change", function () {
-//   if (!ScreenBlur.classList.contains("blur")) {
-//     // Apply blur effect to the upper semi circle when power button is off
-//     upperSemiCircle.style.filter = "blur(10px)";
-
-//     // Remove blur effect from all images inside elements with the "image-set" class
-//     imageSets.forEach(image => {
-//       image.style.filter = "none";
-//     });
-//   }
-// });
-
-
 
 
       const scenary3 = document.getElementById("scenary3");
