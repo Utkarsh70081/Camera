@@ -943,6 +943,11 @@ transform: rotate(220deg);
     width: 100%;
     box-sizing: border-box;
   }
+  .bground{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
   .upper_semi_ckl{
     margin-top: -136px;
     margin-left: 0px;
