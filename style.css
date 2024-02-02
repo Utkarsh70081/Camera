@@ -946,6 +946,7 @@ transform: rotate(220deg);
   .bground{
     margin: 0px;
     padding: 0px;
+    position: sticky;
     box-sizing: border-box;
   }
   .upper_semi_ckl{
