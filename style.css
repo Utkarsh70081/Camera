@@ -927,14 +927,13 @@ transform: rotate(220deg);
   border-radius: 5px;
   cursor: pointer;
 }
-#range::-webkit-slider-thumb {
+/* #range::-webkit-slider-thumb {
   -webkit-appearance: none;
   background: grey;
-/*   box-shadow: -410px 0 0 400px #00fd0a; */
   
   cursor: pointer;
   border: 2px solid black;
-}
+} */
 
 input[type="range"] {
   color: grey;
