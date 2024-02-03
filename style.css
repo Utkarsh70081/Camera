@@ -920,7 +920,8 @@ transform: rotate(220deg);
   bottom: 70px;
   color: black;
   background: #535353;
-  box-shadow: inset 1px 1px 1px #909090;
+/*   box-shadow: inset 1px 1px 1px #909090; */
+  box-shadow: inset 1px 1px 1px gray;
   border-radius: 5px;
   cursor: pointer;
 }
