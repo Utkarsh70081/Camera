@@ -911,6 +911,7 @@ transform: rotate(220deg);
 }
 
 #range{
+  appearance: none;
   -webkit-appearance: none;
   
  position: relative;
