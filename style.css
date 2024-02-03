@@ -911,17 +911,16 @@ transform: rotate(220deg);
 }
 
 #range{
-  position: relative;
+ position: relative;
   transform: rotate(270deg);
   margin-top: 0px;
   margin-left: -25px;
   height: 10px;
   width: 90px;
   bottom: 70px;
-  color: black;
-  background: #535353;
-/*   box-shadow: inset 1px 1px 1px #909090; */
-  box-shadow: inset 1px 1px 1px gray;
+  /* color: black; */
+  background: #000000;
+  box-shadow: inset 1px 1px 1px #909090;
   border-radius: 5px;
   cursor: pointer;
 }
