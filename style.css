@@ -936,6 +936,10 @@ transform: rotate(220deg);
   border: 2px solid black;
 }
 
+input[type="range"] {
+  color: grey;
+}
+
 #ScreenBlur{
   filter: blur(4px);
 }
