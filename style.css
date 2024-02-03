@@ -911,6 +911,8 @@ transform: rotate(220deg);
 }
 
 #range{
+  -webkit-appearance: none;
+  
  position: relative;
   transform: rotate(270deg);
   margin-top: 0px;
@@ -925,6 +927,10 @@ transform: rotate(220deg);
   cursor: pointer;
 }
 #range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: grey;
+  box-shadow: -410px 0 0 400px #00fd0a;
+  
   cursor: pointer;
   border: 2px solid black;
 }
