@@ -930,7 +930,7 @@ transform: rotate(220deg);
 #range::-webkit-slider-thumb {
   -webkit-appearance: none;
   background: grey;
-  box-shadow: -410px 0 0 400px #00fd0a;
+/*   box-shadow: -410px 0 0 400px #00fd0a; */
   
   cursor: pointer;
   border: 2px solid black;
