@@ -922,13 +922,13 @@ transform: rotate(220deg);
   width: 90px;
   bottom: 70px;
   color: grey;
-  background: #000000;
+  background: #909090;
   box-shadow: inset 1px 1px 1px #909090;
   border-radius: 5px;
   cursor: pointer;
 }
 #range::-webkit-slider-thumb {
-/*   -webkit-appearance: none; */
+  -webkit-appearance: color;
   background: grey;
   
   cursor: pointer;
