@@ -928,7 +928,7 @@ transform: rotate(220deg);
   cursor: pointer;
 }
 #range::-webkit-slider-thumb {
-  -webkit-appearance: none;
+/*   -webkit-appearance: none; */
   background: grey;
   
   cursor: pointer;
