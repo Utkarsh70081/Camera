@@ -921,7 +921,7 @@ transform: rotate(220deg);
   width: 90px;
   bottom: 70px;
   /* color: black; */
-  background: #535353;
+  background: #ffffff;
   box-shadow: inset 1px 1px 1px #909090;
   border-radius: 5px;
   cursor: pointer;
@@ -929,10 +929,14 @@ transform: rotate(220deg);
 /* input[type="range"]::-webkit-slider-thumb {
   background-color: #ff0000;
 } */
-#range::-webkit-slider-thumb {
-  cursor: pointer;
-  border: 2px solid black;
-}
+ #range::-webkit-slider-thumb {
+    /* -webkit-appearance: color; */
+    background: grey;
+    
+    cursor: pointer;
+    border: 2px solid black;
+    color: #909090;
+  }
 
 #ScreenBlur{
   filter: blur(4px);
