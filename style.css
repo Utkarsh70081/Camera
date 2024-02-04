@@ -911,34 +911,26 @@ transform: rotate(220deg);
 }
 
 #range{
-  appearance: none;
-/*   -webkit-appearance: none; */
-  
- position: relative;
+  position: relative;
   transform: rotate(270deg);
   margin-top: 0px;
   margin-left: -25px;
   height: 10px;
   width: 90px;
   bottom: 70px;
-  color: grey;
-  background: #f2f2f2;
+  /* color: black; */
+  background: #535353;
   box-shadow: inset 1px 1px 1px #909090;
   border-radius: 5px;
   cursor: pointer;
 }
+/* input[type="range"]::-webkit-slider-thumb {
+  background-color: #ff0000;
+} */
 #range::-webkit-slider-thumb {
-  -webkit-appearance: color;
-  background: grey;
-  
   cursor: pointer;
   border: 2px solid black;
-  color: #909090;
 }
-
-/* input[type="range"] {
-  color: grey;
-} */
 
 #ScreenBlur{
   filter: blur(4px);
@@ -948,16 +940,12 @@ transform: rotate(220deg);
   filter: blur(0px);
 }
 
+
+
 @media screen and (max-width: 375px) {
   section{
     height: 100%;
     width: 100%;
-    box-sizing: border-box;
-  }
-  .bground{
-    margin: 0px;
-    padding: 0px;
-    position: sticky;
     box-sizing: border-box;
   }
   .upper_semi_ckl{
@@ -1015,7 +1003,7 @@ transform: rotate(220deg);
     font-size: 15px;
     height: 18px;
     width: 21px;
-    top: 3px;
+    top: 6px;
   }
   .three_box .image3 input::before{
     font-size: 15px;
@@ -1133,10 +1121,11 @@ transform: rotate(220deg);
       margin-left: -390px;
     }
   }
-  #moon3 {
-    margin-left: -74px;
-}
   
+  #moon3{
+    
+    margin-left: -74px;
+  }
 }
 
 
