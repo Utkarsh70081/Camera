@@ -912,7 +912,7 @@ transform: rotate(220deg);
 
 #range{
   appearance: none;
-  -webkit-appearance: none;
+/*   -webkit-appearance: none; */
   
  position: relative;
   transform: rotate(270deg);
