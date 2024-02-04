@@ -930,9 +930,8 @@ transform: rotate(220deg);
   background-color: #ff0000;
 } */
  #range::-webkit-slider-thumb {
-    /* -webkit-appearance: color; */
-    background: grey;
-    
+    -webkit-appearance: black;
+    background: #909090;
     cursor: pointer;
     border: 2px solid black;
     color: #909090;
@@ -949,6 +948,12 @@ transform: rotate(220deg);
 
 
 @media screen and (max-width: 375px) {
+  body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+}
   section{
     height: 100%;
     width: 100%;
